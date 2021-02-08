@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Tech News</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+<div class="container"></div>
+    <div class="wrapper">
+        <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Homepage</a>
+                        </li>
+                        {{!-- loggedIn is a property we made with session, make sure you pass in this property as an object to handlesbars when you render the main templates in homeroutes.... the same place you passed in {post, loggedIn: req.session.loggedIn}--}}
+                        {{#if loggedIn}}
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/dashboard">Mad Libs</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" id = "logout" href="/">Logout</a>
+                        </li>
+                        {{else}}
+                        <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1>
+            <a class="main-title" href="/">Mad Libs!</a>
+        </h1>
+        </header>
+        <main>
+        {{{ body }}}
+        </main>
+    </div>
+</div>
+{{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+{{/if}}
+</body>
+</html>
