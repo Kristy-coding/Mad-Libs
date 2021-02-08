@@ -1,10 +1,14 @@
 
-
+body {
+    background-image: url(/images/background-1503863_1280.webp);
+}
 .card {
-    max-width: 80%;
+    
+    max-width: 60%;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 100px;
 
 }
 
@@ -23,11 +27,27 @@ header {
 }
 
 .main-title {
+    font-size: 100px;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+    font-weight:900;
     margin-left: 50px;
     background-color: rgb(57, 57, 247);
     color: black;
     padding: 10px;
     border-radius: 10px;
+}
+
+.second-title {
+    background-color: black;
+  color: hotpink;
+  font-size: smaller;
+    
+}
+
+.nav-link {
+    color: yellow;
+    font-weight: bold;
 }
 
 h1 {
