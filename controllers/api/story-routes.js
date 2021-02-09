@@ -23,11 +23,12 @@ router.get('/', (req, res) => {
       // next we'll include the JOIN to the User table. We do this by adding the property include, as shown in the following code... this property takes in an array so that if we needed to we could join information from multiple tables aka make mulitple JOIN statements
       attributes: ['id','title', 'created_at'],
       // order by post recent posts
-      order: [['created_at', 'DESC']],
+      //order: [['created_at', 'DESC']],
       include: [
            // include the Word model here:
           {
             model: Word,
+            //order:[['id', 'DESC']], ?? is want to get the array to order differently to render
             include: {
               model: User,
               attributes: ['username']
@@ -45,6 +46,41 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
   
+});
+
+
+//GET single story .../api/story/:id
+router.get('/:id', (req, res) => {
+    Story.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [
+        // include the Comment model here:
+        {
+          model: Word,
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbStoryData => {
+        if (!dbStoryData) {
+          res.status(404).json({ message: 'No story found with this id' });
+          return;
+        }
+        res.json(dbStoryData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
 });
 
 // POST /api/story
