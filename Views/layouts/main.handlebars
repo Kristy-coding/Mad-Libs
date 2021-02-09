@@ -24,8 +24,20 @@
                         </li>
                         {{!-- loggedIn is a property we made with session, make sure you pass in this property as an object to handlesbars when you render the main templates in homeroutes.... the same place you passed in {post, loggedIn: req.session.loggedIn}--}}
                         {{#if loggedIn}}
+
+
+                        <div class="dropdown">
+                            <a class=" dropdown-toggle active nav-item nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                MAD LIBS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/dashboard">Mad Libs</a>
+                        <a class="nav-link" id = "completed" href="/">VIEW COMPLETED</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" id = "logout" href="/">LOGOUT</a>

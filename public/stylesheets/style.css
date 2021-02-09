@@ -1,6 +1,7 @@
 
 body {
     background-image: url(/images/background-1503863_1280.webp);
+    
 }
 .card {
     
@@ -87,4 +88,10 @@ h1 {
 
 .comment-card {
     background-color: rgba(146, 177, 202, 0.404);
+}
+
+.note-pad {
+    background-image: url(/images/legal-pad-979558_1280.webp);
+    max-width: 60%;
+    min-height: 50vw;
 }
