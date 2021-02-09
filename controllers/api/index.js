@@ -4,6 +4,8 @@ const router = require('express').Router();
 
 // require the files with all of our routes logic 
 const userRoutes = require('./user-routes');
+const storyRoutes = require('./story-routes');
+const wordRoutes = require('./word-routes');
 
 
 
@@ -14,6 +16,8 @@ const userRoutes = require('./user-routes');
 // for all routes in the ./post-routes file prefix them with /posts
 // for all routes in the ./comment-routes file, prefix them with /comments 
 router.use('/users', userRoutes);
+router.use('/story', storyRoutes);
+router.use('/word', wordRoutes);
 
 
 module.exports = router;

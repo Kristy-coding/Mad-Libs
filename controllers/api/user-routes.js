@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 // requiring ../../models will actually connect to index.js be default, it will always look an index file if a more specific path isn't defined ../../models/index.js
 // when we require from index we are getting the models we defined and also the properties and methods we creating to define the relationships between the models 
-const {User} = require('../../models');
+const {User, Story, Word} = require('../../models');
 
 // GET/api/users
 router.get('/', (req, res)=> {
@@ -29,21 +29,19 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        // include: [
-        //      {
-        //       model: Post,
-        //       attributes: ['id', 'title','blog_text', 'created_at']
-        //      },
-        //      // include the Comment model here, which also needs to include the post model in the context of the comment so we know what post they were commenting on
-        //     {
-        //         model: Comment,
-        //         attributes: ['id', 'comment_text', 'created_at'],
-        //         include: {
-        //         model: Post,
-        //         attributes: ['title']
-        //         }
-        //     }
-        //   ]
+        include: [
+             {
+              model: Story
+             },
+             // include the Word model here, which also needs to include the Story model in the context of the Word so we know what Story they were commenting on
+            {
+                model: Word,
+                include: {
+                model: Story,
+                attributes: ['title']
+                }
+            }
+          ]
     })
     .then(dbUserData => {
         if (!dbUserData) {
