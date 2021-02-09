@@ -19,7 +19,8 @@ a {
 
 header {
     background-color: black;
-    margin-bottom: 20px;
+    margin-bottom: -8px;
+    
 
 }
 
@@ -33,6 +34,7 @@ header {
     font-style: italic;
     font-weight:900;
     margin-left: 50px;
+    margin-bottom: 20px;
     background-color: rgb(57, 57, 247);
     color: black;
     padding: 10px;
@@ -89,9 +91,31 @@ h1 {
 .comment-card {
     background-color: rgba(146, 177, 202, 0.404);
 }
-
+.note-pad-bg {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(57, 57, 247);
+    padding: 50px;
+    
+    
+}
 .note-pad {
     background-image: url(/images/legal-pad-979558_1280.webp);
     max-width: 60%;
     min-height: 50vw;
+    border-radius: 10px;    
+    
 }
+
+.note-text {
+    margin-left: 100px;
+    padding-top: 50px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.blurry-text {
+    color: transparent;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+ }
