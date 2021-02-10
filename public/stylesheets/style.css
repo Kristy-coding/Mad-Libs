@@ -10,8 +10,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-
+    
 }
+
 
 a {
     text-decoration: none;
@@ -94,12 +95,15 @@ h1 {
 .note-pad-bg {
     min-width: 100vw;
     min-height: 100vh;
-    background-color: rgb(57, 57, 247);
+    background-image: url(/images/background-1988348_1280.png);
+    background-color: rgba(255, 255, 255, 0.726);
+    /*background-color: rgb(17, 197, 182);*/
     padding: 50px;
     
     
 }
 .note-pad {
+    
     background-image: url(/images/legal-pad-979558_1280.webp);
     max-width: 60%;
     min-height: 50vw;
@@ -118,4 +122,31 @@ h1 {
 .blurry-text {
     color: transparent;
     text-shadow: 0 0 4px rgba(0,0,0,0.5);
+ }
+
+ .choose-template-bg {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url(/images/memphis-1788465_1280.webp);
+    background-color: rgba(255, 255, 255, 0.726);
+    /*background-color: rgb(17, 197, 182);*/
+    padding: 50px;
+ }
+
+ .choose-template-container {
+    background-color: black;
+    max-width: 50%;
+    height: 100vh;
+    margin-top: 30px;
+ }
+
+ .choose-template-title {
+     color: yellow;
+     font-size: 1.75rem;
+     font-style: italic;
+ }
+
+ .choose-template-list {
+     margin-left: 10%;
+     margin-right: 10%;
  }

@@ -101,6 +101,38 @@ router.get('/:id', (req, res) => {
           });
      });
 
+// GET /api/story/title 
+// get all the stories instances with the same title 
+router.post('/title', (req, res) => {
+          //console.log(req.session)
+          
+          Story.findAll({
+              where: {
+                  title: req.body.title,
+                  // WHY IS THIS NOT WORKING why is user_id invalid????
+                  user_id: req.session.user_id
+              },
+              include: [
+                {
+                  model: Word,
+                  include: {
+                    model: User,
+                    attributes: ['username']
+                  }
+                },
+                {
+                  model: User,
+                  attributes: ['username']
+                }
+              ]
+            })
+            .then(dbStoryData => res.json(dbStoryData))
+            .catch(err => {
+              console.log(err);
+              res.status(500).json(err);
+            });
+      });
+
 
 
 

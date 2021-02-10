@@ -26,16 +26,12 @@
                         {{#if loggedIn}}
 
 
-                        <div class="dropdown">
-                            <a class=" dropdown-toggle active nav-item nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                MAD LIBS
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
+                       <li class="nav-item">
+                        <a class="nav-link get-all-story" id = "completed" href="/dashboard"> PLAY MAD LIBs</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" id = "completed" href="/">WORD BANK</a>
+                        </li>
                         <li class="nav-item">
                         <a class="nav-link" id = "completed" href="/">VIEW COMPLETED</a>
                         </li>
@@ -63,6 +59,7 @@
 </div>
 {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  <script src= "/javascript/dashboard-routes.js"></script> 
 {{/if}}
 </body>
 </html>
