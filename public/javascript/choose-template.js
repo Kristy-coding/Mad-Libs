@@ -9,7 +9,7 @@
 
 
 
-async function createStoryHandler(event) {
+function createStoryHandler(event) {
     event.preventDefault();
 
 
@@ -18,73 +18,47 @@ async function createStoryHandler(event) {
     
    console.log(title)
   
-
-    ////On form submission, this will grab the story titlefrom the button click and send them with a POST request to /api/posts.... /api/posts endpoint requires a third property: user ID can be obtained from the session
-
-    const response = await fetch(`/api/story`, {
-
-      method: 'POST',
-      body: JSON.stringify({
-        title
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-  
-    if (response.ok) {
-        // if the response from the database is good then we are redirected to the dashboard where we can see our new post was created/ added to the database and displayed on the dashboard 
-        //console.log(response)
-        
-      //document.location.replace(`/dashboard/story/id`);
+   fetch("/api/story", { 
       
+    // Adding method type 
+    method: "POST", 
+      
+    // Adding body or contents to send 
+    body: JSON.stringify({ 
+        title: title 
+    }), 
+      
+    // Adding headers to the request 
+    headers: { 
+        "Content-type": "application/json; charset=UTF-8"
+    } 
+}) 
+  
+        // Converting to JSON 
+        .then(response => response.json()) 
+        
+        // Displaying results to console 
+        .then(dbStoryData => {
+            
+            var id = dbStoryData.id 
+            //console.log(dbStoryData.id)
+            document.location.replace(`/dashboard/story/${JSON.stringify(id)}`)
 
-    } else {
-      alert(response.statusText);
-    }
-   
+            //${JSON.stringify(dbStoryData.id)}
+        
+        
+        }); 
+      
 }
 
-// function getStoryId() {
-//     router.get('/dashboard/story/id', (req, res) => {
-//         //console.log(req.session)
-        
-//         Story.findAll({
-//             where: {
-//                 title: title
-//             },
-//             include: [
-//               {
-//                 model: Word,
-//                 include: {
-//                   model: User,
-//                   attributes: ['username']
-//                 }
-//               },
-//               {
-//                 model: User,
-//                 attributes: ['username']
-//               }
-//             ]
-//           })
-//             .then(dbStoryData => {
-//                 console.log(dbStoryData)
-           
-//             // const posts = dbPostData.map(post => post.get({ plain: true }));
-            
-//             // res.render('first-template', { posts, loggedIn: req.session.loggedIn });
-//             })
-//             .catch(err => {
-//               console.log(err);
-//               res.status(500).json(err);
-//         });
-//     });
-// }
+
+document.querySelector('.choose-template-list').addEventListener('click', createStoryHandler);
+
+ 
+
+ 
+
+
   
-  document.querySelector('.choose-template-list').addEventListener('click', createStoryHandler);
-
-
-
-  module.exports = router;
   
 

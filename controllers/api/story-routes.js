@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
       // Query configuration
       // attributes specifies which coloumns in the Post modale we want to select (created_at is given to us by sequelize)
       // next we'll include the JOIN to the User table. We do this by adding the property include, as shown in the following code... this property takes in an array so that if we needed to we could join information from multiple tables aka make mulitple JOIN statements
-      attributes: ['id','title', 'created_at'],
+      
       // order by post recent posts
       //order: [['created_at', 'DESC']],
       include: [
@@ -111,20 +111,22 @@ router.post('/title', (req, res) => {
                   title: req.body.title,
                   // WHY IS THIS NOT WORKING why is user_id invalid????
                   user_id: req.session.user_id
-              },
-              include: [
-                {
-                  model: Word,
-                  include: {
-                    model: User,
-                    attributes: ['username']
-                  }
-                },
-                {
-                  model: User,
-                  attributes: ['username']
-                }
-              ]
+                  //user_id: req.body.user_id
+                  
+               },
+              // include: [
+              //   {
+              //     model: Word,
+              //     include: {
+              //       model: User,
+              //       attributes: ['username']
+              //     }
+              //   },
+              //   {
+              //     model: User,
+              //     attributes: ['username']
+              //   }
+              // ]
             })
             .then(dbStoryData => res.json(dbStoryData))
             .catch(err => {
