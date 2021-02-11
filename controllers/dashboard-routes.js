@@ -18,42 +18,33 @@ router.get('/', (req, res)=>{
 router.get(`/story/:id`, (req, res) => {
 
 
-    res.render('fill-template');
+    ///res.render('fill-template');
 
-    // Story.findOne({
+    Story.findOne({
     
-    //     where: {
-    //       id: 56
-    //     }  
-    //     // include: [
-    //     //   {
-    //     //     model: Word,
-    //     //     include: {
-    //     //       model: User,
-    //     //       attributes: ['username']
-    //     //     }
-    //     //   },
-    //     //   {
-    //     //     model: User,
-    //     //     attributes: ['username']
-    //     //   }
-    //     // ]
-    //   })
-    //     .then(dbStoryData => {
-    //       if (dbStoryData) {
-    //       // serialize the data then pass it to render as an object  
-    //         const story = dbStorytData.get({ plain: true });
+        where: {
+          id: req.params.id
+        }  
+      })
+        .then(dbStoryData => {
             
-    //         res.render('fill-template', {
-    //           story
-    //         });
-    //       } else {
-    //         res.status(404).end();
-    //       }
-    //     })
-    //     .catch(err => {
-    //       res.status(500).json(err);
-    //     });
+          if (dbStoryData) {
+          // serialize the data then pass it to render as an object 
+
+            const story = dbStoryData.get({ plain: true });
+
+            console.log(story)
+
+            res.render('fill-template', {
+              story
+            });
+          } else {
+            res.status(404).end();
+          }
+        })
+        .catch(err => {
+          res.status(500).json(err);
+        });
 
 });
 
