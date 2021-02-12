@@ -151,6 +151,17 @@ h1 {
      margin-right: 10%;
  }
 
+ .note-pad-title {
+     
+     margin-left: 100px;
+ }
+
  .note-pad-paragraph {
-     padding-top: 100px;
+    padding-top: 100px;
+     margin-left: 100px;
+ }
+
+ .word-input {
+     max-width: 50%;
+     margin-left: 100px;
  }

@@ -36,8 +36,7 @@ router.get(`/story/:id`, (req, res) => {
             console.log(story)
 
             res.render('fill-template', {
-              story
-            });
+              story, loggedIn: true });
           } else {
             res.status(404).end();
           }

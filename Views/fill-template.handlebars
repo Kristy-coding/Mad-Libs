@@ -1,7 +1,16 @@
 <div class="note-pad-bg">
 <div class="container note-pad">
 
-   <p class="note-pad-paragraph">{{story.title}} </p> 
-  <p> this will be a form where the user is prompted for words that match the placeholder text part of speech</p> 
+  <p class ='note-pad-paragraph'> Grab some friends and get ready to play the best word game of all time. The form field will prompt you to enter a word that matches a particular part of speech or category. Pay attention to the theme of your template and use your creative energy to come up with the funniest most outrageous and rediculous words. Keep entering words into the form field until you are prompted to "finish template". When you click "finish template" you will be taken to a page where you can view your hilarious Mad Lib work of art! Have fun!</p> 
+   <p class="note-pad-title"> The theme of your template is <span class="text-danger fs-3">"{{story.title}}"...</span> 
+  </p> 
+
+ <div class="input-group mb-3 word-input">
+        <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary bg-info input-button" type="button" id="button-addon2">Submit</button>
+ </div>
+
+  
 </div>
 </div>
+<script src="/javascript/fill-template.js"></script>
