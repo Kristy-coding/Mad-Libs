@@ -1,6 +1,12 @@
 
+// we can enter all the template arrays here and then say 
+// if title = unicorns then set arry= to unicorns array, if title = coding mad libs then use coding arry 
+// grab title with document.querySelector(.note-pad-title).innerHTML 
 
-const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural noun", "adjective","color,adjective", "noun", "plural noun", "adjective", "verb", "plural noun", "verb ending in -ed", "verb", "noun", "adjective"]
+// make an epty arrry variable, we will set this equal to one of the other arrays as a stoy title is generated 
+
+
+const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural noun", "adjective","color","adjective", "noun", "plural noun", "adjective", "verb", "plural noun", "verb ending in -ed", "verb", "noun", "adjective"]
 
 
 var input_container = document.querySelector('.word-input');

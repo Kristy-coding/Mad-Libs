@@ -104,7 +104,7 @@ h1 {
 
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url(/images/pattern-854008_1280.png);
+    background-image: url(/images/purple-1788479_1280.png);
     background-color: rgba(255, 255, 255, 0.726);
     /*background-color: rgb(17, 197, 182);*/
     padding: 50px;
@@ -142,14 +142,17 @@ h1 {
  }
 
  .choose-template-container {
-    background-color: black;
+    /*background-color: rgb(247, 234, 57);*/
+    background-image: url(/images/legal-pad-979558_1280.webp);
+    border-radius: 10px;
     max-width: 50%;
     height: 100vh;
     margin-top: 30px;
  }
 
  .choose-template-title {
-     color: yellow;
+     padding-top: 100px;
+     color: rgb(232, 9, 240);
      font-size: 1.75rem;
      font-style: italic;
  }
@@ -193,8 +196,8 @@ h1 {
 
  .choose-btn{
      margin-bottom: 10px;
-     background-color: rgb(231, 23, 231);
-     color: white;
+     background-color: rgba(0, 0, 0, 0.212);
+     color:rgb(61, 4, 136);
      
  }
 
@@ -203,5 +206,13 @@ h1 {
      max-width: 40%;
      margin-left: 30%;
      border-radius: 10px;
+ }
+
+ .completed-template-title {
+     color: rgb(41, 41, 224);
+     margin-left: 10%;
+     font-weight: bold;
+     font-style: italic;
+     
  }
  
