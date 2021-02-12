@@ -54,6 +54,10 @@ header {
     font-weight: bold;
 }
 
+.nav-link-play {
+    color: rgb(0, 174, 255);
+}
+
 h1 {
     padding-top: 10px;
     padding-right: 10px;
