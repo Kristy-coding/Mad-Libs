@@ -3,7 +3,8 @@
 const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural noun", "adjective","color,adjective", "noun", "plural noun", "adjective", "verb", "plural noun", "verb ending in -ed", "verb", "noun", "adjective"]
 
 
-
+var input_container = document.querySelector('.word-input');
+var generate_button = document.querySelector('.generate-button');
 //var part_of_speech = document.querySelector('input').placeholder
 // on page load initiate the placeholder text with the first index of the array 
 
@@ -71,9 +72,15 @@ async function addWordHandler(event) {
                         
                         
                     } else {
+
+                        input_container.classList.add('hide');
+                        generate_button.classList.remove('hide');
                         console.log('template finished!')
 
                         // make generate template button visible (take hide off)
+                        // on button click grag the story id and change location to dashboard/story/id/generate where the id is the `${story_id}`
+                        // on this routes make a fetch request to find one and res.render(/completed- template, {story})
+                        // this time the {story} will have all the info we need about the words 
                         
                     }
                    

@@ -165,3 +165,11 @@ h1 {
      max-width: 50%;
      margin-left: 100px;
  }
+
+ .hide {
+     display: none;
+ }
+
+ .generate-button {
+     margin-left: 300px;
+ }
