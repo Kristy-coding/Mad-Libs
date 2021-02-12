@@ -115,7 +115,8 @@ h1 {
     background-image: url(/images/legal-pad-979558_1280.webp);
     max-width: 60%;
     min-height: 50vw;
-    border-radius: 10px;    
+    border-radius: 10px; 
+    box-shadow: 5px 10px   
     
 }
 
