@@ -1,3 +1,5 @@
+
+
 const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural noun", "adjective","color,adjective", "noun", "plural noun", "adjective", "verb", "plural noun", "verb ending in -ed", "verb", "noun", "adjective"]
 
 
@@ -10,18 +12,28 @@ var part_of_speech = unicornArray[index];
 //var part_of_speech = unicornArray[index];
 //console.log(part_of_speech)
 
+//grab placeholder text
+var input_box = document.querySelector('input')
+input_box.placeholder = part_of_speech
 
+
+// grab input box (innerhtml)
 
 // grabbing the story id from the url (the number at the end of the url is the id of the story)
 var story_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1]
-console.log(story_id)
+    //console.log(story_id)
 
 async function addWordHandler(event) {
 
     event.preventDefault();
+    
+    
 
     var word = document.querySelector('input').value;
+
+    //clear input box after value is captured in word 
+    input_box.value = ""
     //console.log(word)
 
     // for (var i = 0; i < unicornArray.length; i++) {
@@ -52,10 +64,16 @@ async function addWordHandler(event) {
                         index++
                         console.log(index);
                          part_of_speech = unicornArray[index];
+                         input_box.placeholder = part_of_speech
+                         
                         //var part_of_speech = unicornArray[index];
                         console.log(part_of_speech);
+                        
+                        
                     } else {
                         console.log('template finished!')
+
+                        // make generate template button visible (take hide off)
                         
                     }
                    
