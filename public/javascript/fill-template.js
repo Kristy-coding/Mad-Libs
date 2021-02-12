@@ -6,9 +6,9 @@ const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural
 // on page load initiate the placeholder text with the first index of the array 
 
 var index = 0
-
 var part_of_speech = unicornArray[index];
-console.log(part_of_speech)
+//var part_of_speech = unicornArray[index];
+//console.log(part_of_speech)
 
 
 
@@ -22,7 +22,7 @@ async function addWordHandler(event) {
     event.preventDefault();
 
     var word = document.querySelector('input').value;
-    console.log(word)
+    //console.log(word)
 
     // for (var i = 0; i < unicornArray.length; i++) {
         
@@ -30,7 +30,7 @@ async function addWordHandler(event) {
     //     // then on submit a word get added to the data base for this story via a fetch post request
     //     // when the array ends, a button pops up to 'finish- template', on click we grab the story form the databse(findOne where id = id in url) which nows has a bunch of words associated with it and loop through the array of associated words backwards? depending on how they end up in the database and render them to the hardcoded templat word[0],word[1] etc. 
     // }   
-        if (word) {
+        if (word && part_of_speech && story_id) {
             const response = await fetch('/api/word', {
               method: 'POST',
               body: JSON.stringify({
@@ -51,7 +51,8 @@ async function addWordHandler(event) {
                     if(index < unicornArray.length -1 ){
                         index++
                         console.log(index);
-                        var part_of_speech = unicornArray[index];
+                         part_of_speech = unicornArray[index];
+                        //var part_of_speech = unicornArray[index];
                         console.log(part_of_speech);
                     } else {
                         console.log('template finished!')
