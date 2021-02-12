@@ -10,7 +10,7 @@ const { findAll, findOne } = require('../models/User');
 // GET /dashboard
 // here we want to get all stories 
 router.get('/', (req, res)=>{
-    res.render('choose-template')
+    res.render('choose-template', {loggedIn: true})
 })
 
 
@@ -47,6 +47,40 @@ router.get(`/story/:id`, (req, res) => {
         });
 
 });
+
+router.get(`/story/generate/:id`, (req, res) => {
+
+ 
+
+  Story.findOne({
+    
+    where: {
+      id: req.params.id
+    },
+    include: [
+      // include the Word model here:
+      {model: Word}
+    ] 
+  })
+    .then(dbStoryData => {
+        
+      if (dbStoryData) {
+      // serialize the data then pass it to render as an object 
+
+        const story = dbStoryData.get({ plain: true });
+
+        console.log(story)
+
+        res.render('completed-templates', {
+          story,loggedIn: true });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+})
 
 
 

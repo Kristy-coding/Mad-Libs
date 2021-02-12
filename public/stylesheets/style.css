@@ -98,9 +98,17 @@ h1 {
     background-image: url(/images/background-1988348_1280.png);
     background-color: rgba(255, 255, 255, 0.726);
     /*background-color: rgb(17, 197, 182);*/
+    padding: 50px;   
+}
+.completed-template-bg {
+
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url(/images/pattern-854008_1280.png);
+    background-color: rgba(255, 255, 255, 0.726);
+    /*background-color: rgb(17, 197, 182);*/
     padding: 50px;
-    
-    
+
 }
 .note-pad {
     
@@ -173,3 +181,27 @@ h1 {
  .generate-button {
      margin-left: 300px;
  }
+
+ .completed-template-text {
+     margin-left: 100px;
+ }
+
+ .completed-template-title {
+     padding-top: 100px;
+     margin-left: 100px;
+ }
+
+ .choose-btn{
+     margin-bottom: 10px;
+     background-color: rgb(231, 23, 231);
+     color: white;
+     
+ }
+
+ img {
+     margin-top: 30px;
+     max-width: 40%;
+     margin-left: 30%;
+     border-radius: 10px;
+ }
+ 

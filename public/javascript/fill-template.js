@@ -76,7 +76,7 @@ async function addWordHandler(event) {
                         input_container.classList.add('hide');
                         generate_button.classList.remove('hide');
                         console.log('template finished!')
-
+                        
                         // make generate template button visible (take hide off)
                         // on button click grag the story id and change location to dashboard/story/id/generate where the id is the `${story_id}`
                         // on this routes make a fetch request to find one and res.render(/completed- template, {story})
@@ -84,13 +84,22 @@ async function addWordHandler(event) {
                         
                     }
                    
-    
+                    
               //document.location.reload();
             } else {
               alert(response.statusText);
             }
         }
 }
+
+function generateTemplate () {
+
+    document.location.replace(`/dashboard/story/generate/${story_id}`)
+
+ }
+ 
+
+ document.querySelector('.generate-button').addEventListener('click', generateTemplate)
 
 
 
