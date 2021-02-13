@@ -214,12 +214,12 @@ h1 {
  img {
      margin-top: 30px;
      max-width: 55%;
-     margin-left: 20%;
+     margin-left: 25%;
      border-radius: 10px;
  }
 
  .completed-template-title {
-     color: rgb(41, 41, 224);
+     color: rgb(220, 8, 248);
      margin-left: 10%;
      font-weight: bold;
      font-style: italic;
@@ -252,7 +252,7 @@ h1 {
 .saved-title {
    
     margin-left: 100px;
-    color: rgb(0, 153, 255);
+    color: rgb(0, 132, 255);
     font-style: italic;
     font-weight: bold;
 }
