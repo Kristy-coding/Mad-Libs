@@ -1,7 +1,7 @@
 
 const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural noun", "adjective","color","adjective", "noun", "plural noun", "adjective", "verb", "plural noun", "verb ending in -ed", "verb", "noun", "adjective"]
 
-const codingArray = ["this", "is", "the", "code", "array"]
+const codingArray = ["verb", "verb", "adjective", "adjective", "adjective", "plural noun", "adjective", "plural noun", "adjective","noun", "plural noun", "verb"]
 
 let array = ""
 
