@@ -6,6 +6,8 @@ const {Model, DataTypes} = require('sequelize');
 // we need to connect to the database through our config/connection file 
 const sequelize = require('../config/connection');
 
+// trying to search for a valu that "is not null"
+
 
 // create our Post Model 
 

@@ -4,7 +4,8 @@ const sequelize = require('../config/connection');
 const { Story, User, Word } = require('../models');
 const { findAll, findOne } = require('../models/User');
 
-
+// trying to search for stories that are "not null"
+const Op = require('sequelize').Op
 
 // put this script in the mainhandlebars toa access this render
 // GET /dashboard
@@ -86,37 +87,67 @@ router.get(`/story/generate/:id`, (req, res) => {
 //GET /dashboard/saved
 router.get('/saved', (req, res) => {
 
-  res.render('saved-templates',{loggedIn: true});
+  Story.findAll({
+    
+    where: {
+      //id: 
+      
+      user_id: req.session.user_id,
+      text: {[Op.ne]: null}
 
-  // Story.findAll({
-  //   where: {
-  //     text: true,
-  //     user_id: req.session.user
-  //   },
-  //   include: [
-  //     {
-  //       model: Word,
-  //       include: {
-  //         model: User,
-  //         attributes: ['username']
-  //       }
-  //     },
-  //     {
-  //       model: User,
-  //       attributes: ['username']
-  //     }
-  //   ]
-  // })
-  // .then(dbStoryData => {
-  //   // serialize all the storied using map before passing to template
-  //   const story = dbStoryData.map(story => story.get({ plain: true }));
-  //   res.render('saved-templates', { story, loggedIn: true });
-  // })
-  // .catch(err => {
-  //   console.log(err);
-  //   res.status(500).json(err);
-  // });
-});
+    },
+    include: [
+      // include the Word model here:
+      {model: Word}
+    ] 
+  })
+    .then(dbStoryData => {
+        
+      if (dbStoryData) {
+      // serialize the data then pass it to render as an object 
+
+        //const story = dbStoryData.get({ plain: true });
+        const story = dbStoryData.map(story => story.get({ plain: true }));
+
+        console.log(story)
+
+        res.render('saved-templates', {
+          story,loggedIn: true });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+})
+
+  //res.render('saved-templates',{loggedIn: true});
+
+//   Story.findOne({
+//     where: {
+//       //text: true,
+//       //user_id: req.session.user_id
+//       id: 3
+//     },
+//     include: [
+//       {model: Word,},
+//       {
+//         model: User,
+//         attributes: ['username']
+//       }
+//     ]
+//   })
+//   .then(dbStoryData => {
+//     // serialize all the storied using map before passing to template
+//     const story = dbStoryData.map(story => story.get({ plain: true }));
+//     res.render('saved-templates', { story, loggedIn: true });
+//   })
+//   .catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+//   });
+// });
 
 
 

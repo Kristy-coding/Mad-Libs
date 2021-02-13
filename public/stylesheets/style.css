@@ -157,7 +157,7 @@ h1 {
 
  .choose-template-title {
      padding-top: 100px;
-     color: rgb(232, 9, 240);
+     color: rgb(0, 0, 0);
      font-size: 1.75rem;
      font-style: italic;
  }
@@ -201,8 +201,13 @@ h1 {
 
  .choose-btn{
      margin-bottom: 10px;
-     background-color: rgba(0, 0, 0, 0.185);
-     color:rgb(22, 8, 223);
+     background-color: rgb(174, 0, 255);
+     border-width: medium;
+     border-color: black;
+     color: white;
+     /*background-color: rgba(0, 0, 0, 0.185);*/
+     /*color: rgb(22, 8, 223);*/
+     
      
  }
 
@@ -242,4 +247,21 @@ h1 {
     border-radius: 10px; 
     box-shadow: 5px 10px   
     
+}
+
+.saved-title {
+   
+    margin-left: 100px;
+    color: rgb(0, 153, 255);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.saved-paragraph {
+    
+    margin-left: 100px;
+}
+
+.saved-container {
+    padding-top: 100px;
 }
