@@ -201,8 +201,8 @@ h1 {
 
  .choose-btn{
      margin-bottom: 10px;
-     background-color: rgba(0, 0, 0, 0.212);
-     color:rgb(61, 4, 136);
+     background-color: rgba(0, 0, 0, 0.185);
+     color:rgb(22, 8, 223);
      
  }
 
@@ -221,3 +221,6 @@ h1 {
      
  }
  
+ .save-story-button{
+     margin-left: 300px;
+ }

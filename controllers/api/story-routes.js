@@ -135,6 +135,32 @@ router.post('/title', (req, res) => {
             });
       });
 
+//UPDATE /api/story/:id
+  router.put('/:id',(req, res) => {
+    Story.update(
+      {
+        
+        text: req.body.text
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    )
+      .then(dbStoryData => {
+        if (!dbStoryData) {
+          res.status(404).json({ message: 'No post found with this id' });
+          return;
+        }
+        res.json(dbStoryData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+});
+
 
 
 
