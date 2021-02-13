@@ -1,14 +1,31 @@
 
 const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural noun", "adjective","color","adjective", "noun", "plural noun", "adjective", "verb", "plural noun", "verb ending in -ed", "verb", "noun", "adjective"]
 
+const codingArray = ["this", "is", "the", "code", "array"]
+
+let array = ""
 
 // we can enter all the template arrays here and then say 
 // if title = unicorns then set arry= to unicorns array, if title = coding mad libs then use coding arry 
 var title = document.querySelector(".inserted-title").textContent
-//console.log(title) 
+console.log(title) 
 
-// make an epty arrry variable, we will set this equal to one of the other arrays as a stoy title is generated 
-//var array = [] 
+
+function chooseArray () {
+      if (title.includes('Bootcamp Experience')){
+            array = codingArray
+      }
+
+      if (title.includes('Unicorn Poops')){
+          array = unicornArray
+      }
+
+      console.log(array)
+}
+
+chooseArray();
+
+console.log(array)
 
 var input_container = document.querySelector('.word-input');
 var generate_button = document.querySelector('.generate-button');
@@ -16,7 +33,7 @@ var generate_button = document.querySelector('.generate-button');
 // on page load initiate the placeholder text with the first index of the array 
 
 var index = 0
-var part_of_speech = unicornArray[index];
+var part_of_speech = array[index];
 //var part_of_speech = unicornArray[index];
 //console.log(part_of_speech)
 
@@ -79,10 +96,10 @@ var story_id = window.location.toString().split('/')[
                   // word get added to the database then reload the page so we can fill in the next word 
                   
                   console.log('response ok')
-                          if(index < unicornArray.length -1 ){
+                          if(index < array.length -1 ){
                               index++
                               console.log(index);
-                              part_of_speech = unicornArray[index];
+                              part_of_speech = array[index];
                               input_box.placeholder = part_of_speech
                               
                               //var part_of_speech = unicornArray[index];

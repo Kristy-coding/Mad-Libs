@@ -36,7 +36,7 @@ router.get(`/story/:id`, (req, res) => {
             const story = dbStoryData.get({ plain: true });
 
             console.log(story)
-
+            
             res.render('fill-template', {
               story, loggedIn: true });
           } else {
@@ -70,11 +70,22 @@ router.get(`/story/generate/:id`, (req, res) => {
 
         const story = dbStoryData.get({ plain: true });
 
-        console.log(story)
-
-        res.render('completed-templates', {
-          story,loggedIn: true });
-      } else {
+        console.log(story.title)
+        //res.render('bootcamp-template');
+         //if(story.title.includes("Unicorn Poops"))
+        // res.render('completed-templates', {
+        //   story,loggedIn: true });
+        if(story.title ==='My Coding Bootcamp Experience'){
+          res.render('bootcamp-template', {
+            story,loggedIn: true });
+        }
+        if(story.title ==='What Happens when a Unicorn Poops?') {
+          res.render('completed-templates', {
+            story,loggedIn: true });
+        }
+      } 
+      
+      else {
         res.status(404).end();
       }
     })

@@ -326,6 +326,11 @@ h1 {
 
 }
 
+.delete-story-btn {
+    margin-left: 80%;
+    margin-bottom: 10px;
+}
+
 @media screen and (max-width: 1178px) {
     .second-title {
         font-size: 20px;
