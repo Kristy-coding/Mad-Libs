@@ -265,3 +265,94 @@ h1 {
 .saved-container {
     padding-top: 100px;
 }
+
+
+@media screen and (max-width: 770px) {
+    img {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .choose-template-container {
+        max-width: 100%;
+       height: none;
+    }
+
+    .choose-template-title{
+        font-size: 20px;
+    }
+    .choose-btn{
+        font-size: 15px;
+    }
+
+    .note-pad{
+        max-width: 100%;
+        background-image: none;
+        background-color: black;
+    }
+    .note-pad-paragraph {
+        padding-top: 10px;
+        margin-left: 0px;
+        color: white;
+    }
+    .note-pad-title{
+        margin-left: 0px;
+        color: white;
+    }
+    .word-input {
+        max-width: 100%;
+        margin-left: 0px;
+        padding-bottom: 20px;
+  }
+
+  .saved-note-pad {
+      background-image: none;
+      background-color: black;
+      max-width: 100%;
+      height: none;
+  }
+  .saved-paragraph {
+    margin-left: 0px;
+    color: white;
+  }
+
+  .saved-title {
+    margin-left: 0px;
+  }
+  .saved-container{
+      padding-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 1178px) {
+    .second-title {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .second-title {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main-title {
+        font-size: 45px;
+        margin-left: 60px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+
+    }
+    .navbar-nav .nav-link {
+        padding-right: 15px;
+    }
+    .navbar-nav {
+        font-size: 15px;
+    }
+}
