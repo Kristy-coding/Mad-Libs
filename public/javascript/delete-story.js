@@ -1,24 +1,25 @@
 
-let buttons = document.querySelector('.delete-story-btn')
- const id = document.querySelectorAll('button').value
- console.log(id)
+
 
 async function deleteStoryHandler(event) {
     event.preventDefault();
+
+    const id = event.target.value
+
     document.location.replace('/dashboard')
-//     // grabbing the id form the url 
    
+   
+      const response = await fetch(`/api/story/${id}`, {
+        method: 'DELETE'
+      });
     
-//       const response = await fetch(`/api/story/${id}`, {
-//         method: 'DELETE'
-//       });
-    
-//       if (response.ok) {
-//         document.location.replace('/dashboard');
-//       } else {
-//         alert(response.statusText);
-//       }
+      if (response.ok) {
+        //document.location.replace('/dashboard');
+        console.log('respoonse ok')
+      } else {
+        alert(response.statusText);
+      }
   
   }
   
-  document.querySelectorAll('button').addEventListener('click', deleteStoryHandler);
+  document.querySelector('.saved-container').addEventListener('click', deleteStoryHandler);
