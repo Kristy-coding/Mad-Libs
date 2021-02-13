@@ -355,4 +355,26 @@ h1 {
     .navbar-nav {
         font-size: 15px;
     }
+    .completed-template-text{
+        margin-left: 0;
+        color: white;
+    }
+
+    .completed-template-title {
+        margin-left: 6%;
+    }
+
+    .save-story-button {
+        margin-left: 220px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .save-story-button {
+        margin-left: 38px
+    }
+    .completed-template-title {
+        padding-top: 30px;
+    }
 }
