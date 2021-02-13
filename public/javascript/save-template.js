@@ -18,7 +18,7 @@ async function saveStoryHandler(event) {
     });
   
     if (response.ok) {
-      //document.location.replace(''); go to saved-templates view , but first create that dashboard route
+      document.location.replace('/dashboard/saved'); 
     } else {
       alert(response.statusText);
     }

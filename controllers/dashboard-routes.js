@@ -83,5 +83,41 @@ router.get(`/story/generate/:id`, (req, res) => {
 })
 
 
+//GET /dashboard/saved
+router.get('/saved', (req, res) => {
+
+  res.render('saved-templates',{loggedIn: true});
+
+  // Story.findAll({
+  //   where: {
+  //     text: true,
+  //     user_id: req.session.user
+  //   },
+  //   include: [
+  //     {
+  //       model: Word,
+  //       include: {
+  //         model: User,
+  //         attributes: ['username']
+  //       }
+  //     },
+  //     {
+  //       model: User,
+  //       attributes: ['username']
+  //     }
+  //   ]
+  // })
+  // .then(dbStoryData => {
+  //   // serialize all the storied using map before passing to template
+  //   const story = dbStoryData.map(story => story.get({ plain: true }));
+  //   res.render('saved-templates', { story, loggedIn: true });
+  // })
+  // .catch(err => {
+  //   console.log(err);
+  //   res.status(500).json(err);
+  // });
+});
+
+
 
 module.exports = router;
