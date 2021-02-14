@@ -16,7 +16,7 @@ body {
 
 a {
     text-decoration: none;
-    color:rgb(57, 57, 247);
+    color:rgb(193, 57, 247);
     
 }
 
@@ -286,8 +286,8 @@ h1 {
 }
 
 .save-story-button {
-    background-color: rgb(4, 157, 245);
-    border-color:rgb(4, 157, 245) ;
+    background-color: rgb(76, 4, 245);
+    border-color: rgb(76, 4, 245) ;
 }
 
 
