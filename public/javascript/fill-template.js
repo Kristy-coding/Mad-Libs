@@ -12,17 +12,38 @@ let array = ""
 var title = document.querySelector(".inserted-title").textContent
 console.log(title) 
 
+var word_count_text = document.querySelector(".word-count")
+
+var word_count_container = document.querySelector(".word-count-box")
+
+
+let word_count = 0
+console.log(word_count)
+
 
 function chooseArray () {
       if (title.includes('Bootcamp Experience')){
             array = codingArray
+            word_count = word_count + codingArray.length
+            console.log(word_count)
+            // initiate word count
+            word_count_text.textContent = word_count
       }
 
       if (title.includes('Unicorn Poops')){
           array = unicornArray
+         word_count = word_count + unicornArray.length
+         console.log(word_count)
+         // initiate word count
+        word_count_text.textContent = word_count
       }
       if (title.includes('The Year')){
         array = theYearArray
+        word_count = word_count + theYearArray.length
+        console.log(word_count)
+        // initiate word count
+        word_count_text.textContent = word_count
+        
     }
 
       console.log(array)
@@ -106,14 +127,19 @@ var story_id = window.location.toString().split('/')[
                               console.log(index);
                               part_of_speech = array[index];
                               input_box.placeholder = part_of_speech
+                              word_count = word_count -1
+                              word_count_text.textContent = word_count
+                              console.log('text content is',word_count_text.textContent)
                               
                               //var part_of_speech = unicornArray[index];
                               console.log(part_of_speech);
+                              console.log(word_count)
                               
                               
                           } else {
 
                               input_container.classList.add('hide');
+                              word_count_container.classList.add('hide');
                               generate_button.classList.remove('hide');
                               console.log('template finished!')
                               

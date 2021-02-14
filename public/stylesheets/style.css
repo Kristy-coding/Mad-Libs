@@ -120,7 +120,7 @@ h1 {
     
     background-image: url(/images/legal-pad-979558_1280.webp);
     max-width: 991px;
-    min-height: 50vw;
+    min-height: 100vh;
     border-radius: 10px; 
     box-shadow: 5px 10px   
     
@@ -187,6 +187,11 @@ h1 {
  .word-input {
      max-width: 50%;
      margin-left: 100px;
+ }
+
+ .word-count-box {
+    margin-left: 100px;
+    color: grey;
  }
 
  .hide {
@@ -307,6 +312,7 @@ h1 {
 
     .note-pad{
         max-width: 100%;
+        height: 100vh;
         background-image: url(/images/legal-pad-979558_1280.webp);
         /*background-image: none;*/
         /*background-color: black;*/
