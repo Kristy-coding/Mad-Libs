@@ -83,6 +83,10 @@ router.get(`/story/generate/:id`, (req, res) => {
           res.render('completed-templates', {
             story,loggedIn: true });
         }
+        if(story.title ==='The Year 2020') {
+          res.render('2020-template', {
+            story,loggedIn: true });
+        }
       } 
       
       else {

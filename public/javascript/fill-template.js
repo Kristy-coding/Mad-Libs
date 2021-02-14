@@ -3,6 +3,8 @@ const unicornArray = ["plural noun","adjective", "plural noun (animals)","plural
 
 const codingArray = ["verb", "verb", "adjective", "adjective", "adjective", "plural noun", "adjective", "plural noun", "adjective","noun", "plural noun", "verb"]
 
+const theYearArray = ["plural noun", "noun", "verb", "distance", "adjective", "verb", "verb ending in -ed", "verb ending in -ing", "verb ending in -ing","verb ending in -ed", "adjective"]
+
 let array = ""
 
 // we can enter all the template arrays here and then say 
@@ -19,6 +21,9 @@ function chooseArray () {
       if (title.includes('Unicorn Poops')){
           array = unicornArray
       }
+      if (title.includes('The Year')){
+        array = theYearArray
+    }
 
       console.log(array)
 }
