@@ -6,7 +6,7 @@ async function deleteStoryHandler(event) {
 
     const id = event.target.value
 
-    document.location.replace('/dashboard')
+    document.location.reload()
    
    
       const response = await fetch(`/api/story/${id}`, {
