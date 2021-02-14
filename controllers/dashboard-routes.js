@@ -87,6 +87,10 @@ router.get(`/story/generate/:id`, (req, res) => {
           res.render('2020-template', {
             story,loggedIn: true });
         }
+        if(story.title ==="You Know You're a 90's Kid If...") {
+          res.render("90s-kid-template", {
+            story,loggedIn: true });
+        }
       } 
       
       else {
