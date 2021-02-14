@@ -5,7 +5,7 @@ const codingArray = ["verb", "verb", "adjective", "adjective", "adjective", "plu
 
 const theYearArray = ["plural noun", "noun", "verb", "distance", "adjective", "verb", "verb ending in -ed", "verb ending in -ing", "verb ending in -ing","verb ending in -ed", "adjective"]
 
-const kidArray = ["ajective","ajective","ajective","ajective","verb ending in -ing", "adjective", "verb ending in -ed", "verb ending in -ing", "adjective", "adjective", "plural noun", "verb", "plural noun", "plural noun", "adjective"]
+const kidArray = ["ajective","ajective","ajective","ajective","verb ending in -ing", "adjective", "verb ending in -ed", "verb ending in -ing", "adjective", "adjective", "name of a person", "verb", "plural noun", "plural noun", "adjective"]
 
 let array = ""
 
