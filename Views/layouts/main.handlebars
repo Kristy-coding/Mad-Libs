@@ -48,7 +48,11 @@
             </div>
         </nav>
            <h1>
+            {{#if loggedIn}}
+            <a class="main-title" href="/dashboard">MAD LIBS</a>
+            {{else}}
             <a class="main-title" href="/">MAD LIBS</a>
+            {{/if}}
             <span class="main-title second-title">WELCOME TO THE <span class="fs-1">90's</span> PARTY!</span>
         </h1>
        
