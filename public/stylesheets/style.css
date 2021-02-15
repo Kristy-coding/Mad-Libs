@@ -199,7 +199,7 @@ h1 {
  }
 
  .generate-button {
-     margin-left: 300px;
+     margin-left: 111px;
  }
 
  .completed-template-text {
@@ -326,7 +326,7 @@ h1 {
         
     }
     .note-pad-title{
-        margin-left: 0px;
+        margin-left: 100px;
         
     }
     .word-input {
@@ -334,14 +334,19 @@ h1 {
         margin-left: 0px;
         padding-bottom: 20px;
   }
+  .input-group>.form-control{
+      margin-left:100px;
+  }
 
   .saved-note-pad {
-      background-image: url(/images/legal-pad-979558_1280.webp);
+      background-image: url(/images/paper-1214979_1280.jpg);
+      /*background-image: url(/images/legal-pad-979558_1280.webp);*/
       max-width: 100%;
       height: none;
   }
   .saved-paragraph {
     margin-left: 0px;
+    
     
   }
 
@@ -418,12 +423,13 @@ h1 {
     }
 
     .choose-template-bg, .note-pad-bg{
-        padding: 12px
+        padding: 50px
     }
 
     .note-pad-paragraph {
         padding-top: 105px;
         color: black;
+        margin-left: 102px;
     }
 }
 
@@ -432,7 +438,9 @@ h1 {
     
     font-size: 1rem;
     }
-
+.note-pad-title {
+    margin-left: 13px;
+}
 .generate-button{
     margin-left: 75px;
     margin-bottom: 20px;
@@ -447,5 +455,39 @@ h1 {
 
 .saved-template-bg {
     padding: 12px;
+}
+.choose-template-container{
+    background-image: url(/images/paper-1214979_1280.jpg);
+    
+}
+.choose-template-bg{
+    padding: 30px;
+}
+
+.note-pad {
+    background-image: url(/images/paper-1214979_1280.jpg);
+}
+.note-pad-bg {
+    padding: 30px;
+}
+.note-pad-paragraph{
+    padding-top: 20px;
+    margin-left: 0;
+}
+.word-count-box{
+    margin-left: 25px;
+}
+.completed-template-bg {
+    padding: 30px;
+}
+.completed-template-title{
+    padding-top: 20px;
+    margin-left: 0;
+}
+.saved-title{
+    margin-top: 0px;
+}
+.input-group>.form-control {
+    margin-left: 0;
 }
 }   
