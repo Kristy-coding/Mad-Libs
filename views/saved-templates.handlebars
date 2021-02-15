@@ -1,0 +1,14 @@
+<div class="saved-template-bg">
+<div class="container saved-note-pad">
+<div class="saved-container">
+{{#each story}}
+<p class="fs-2 saved-title">{{title}}</p>
+<p class="fs-4 saved-paragraph">{{text}} <button type = "input" class="btn btn-primary btn-sm delete-story-btn" value="{{id}}">Delete Story</button></p>
+
+{{/each}}
+
+</div>
+</div>
+</div>
+<script src="/javascript/delete-story.js"></script>
+<script src="./dist/sparkle.min.js"></script>
