@@ -11,6 +11,7 @@ let sequelize;
 
 if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL);
+    console.log('connecting on heroku')
 } else {
 
 
@@ -19,6 +20,8 @@ if (process.env.JAWSDB_URL) {
         dialect: 'mysql',
         port: 3306
     });
+
+    console.log('connecting locally')
 }
 
 module.exports = sequelize;

@@ -22,7 +22,7 @@ const sess = {
   //trying to get this to expire in 15 minutes but not working
   // cookie: {maxAge: 900000},
   cookie: {},
-  resave: false,
+  resave: true,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
