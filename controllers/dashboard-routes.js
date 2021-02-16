@@ -91,6 +91,10 @@ router.get(`/story/generate/:id`, (req, res) => {
           res.render("90s-kid-template", {
             story,loggedIn: true });
         }
+        if(story.title ==="Halloween is the Best!") {
+          res.render("halloween-template", {
+            story,loggedIn: true });
+        }
       } 
       
       else {

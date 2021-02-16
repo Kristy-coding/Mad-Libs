@@ -7,6 +7,8 @@ const theYearArray = ["plural noun", "noun", "verb", "distance", "adjective", "v
 
 const kidArray = ["ajective","verb ending in -ing","ajective","ajective","verb ending in -ing", "adjective", "verb ending in -ed", "verb ending in -ing", "adjective", "adjective", "name of a person", "verb", "plural noun", "plural noun", "adjective"]
 
+const halloweenArray = ["verb", "adjective", "adjective", "plural noun", "noun", "noun", "verb", "verb", "verb"]
+
 let array = ""
 
 // we can enter all the template arrays here and then say 
@@ -50,6 +52,14 @@ function chooseArray () {
       if (title.includes("90's Kid")){
         array = kidArray
         word_count = word_count + kidArray.length
+        console.log(word_count)
+        // initiate word count
+        word_count_text.textContent = word_count
+        
+      }
+      if (title.includes("Halloween")){
+        array = halloweenArray
+        word_count = word_count + halloweenArray.length
         console.log(word_count)
         // initiate word count
         word_count_text.textContent = word_count

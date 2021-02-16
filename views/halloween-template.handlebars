@@ -1,0 +1,29 @@
+<div class="completed-template-bg">
+<div class="container note-pad">
+
+         <p class="completed-template-title"> <span class="completed-template-title fs-3 text-center">"{{story.title}}"...</span> 
+        <p class='completed-template-text fs-4'>Halloween is the best time to <span class="text-danger">{{story.words.0.the_word}}</span>; the weather is <span class="text-danger">{{story.words.1.the_word}}</span> and <span class="text-danger">{{story.words.2.the_word}}</span>. You go door to door saying "Trick or Treat",
+            and people give you <span class="text-danger">{{story.words.3.the_word}}</span> to eat. This year I will
+            dress up as a <span class="text-danger">{{story.words.4.the_word}}</span>, or maybe a <span
+                class="text-danger">{{story.words.5.the_word}}</span>. If someone says "Trick" instead of giving you a
+            "Treat", you might have to <span class="text-danger">{{story.words.6.the_word}}</span>, <span
+                class="text-danger">{{story.words.7.the_word}}</span>, or <span
+                class="text-danger">{{story.words.8.the_word}}</span> to try and scare them into giving you a <span
+                class="text-danger">{{story.words.9.the_word}}</span> treat.</p>
+
+        <button type="button" class="btn btn-danger save-story-button">save story</button>
+        <a href="" class="ps-2 play-again-delete">Play again</a>
+
+        {{!--sourced https://www.woojr.com/halloween-mad-libs/}}
+        {{!--<p>Halloween is the best time to (verb). The weather is (adjective) and (adjective) and you go door to
+            door, saying Trick or Treat! and people give you (plural noun) to eat. This year, I will dress up as a
+            (noun) or maybe a (noun). If someone says Trick instead of giving you a treat, you might have to (verb) or
+            (verb) to try and scare them into giving you a (noun) as a treat.</p>}}
+        halloweenArray = [verb, adjective, adjective, plural noun, noun, noun, verb, verb, noun]
+        --}}
+    </div>
+</div>
+<script src="/javascript/save-template.js"></script>
+<script src="/javascript/delete-completed.js"></script>
+<script src="/javascript/sparkle.min.js"></script>
+<script src="/javascript/sparkle-header.js"></script>
