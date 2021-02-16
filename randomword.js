@@ -3,7 +3,7 @@ const rpos = require('random-part-of-speech');
 const fs = require('fs');
 const seekableStream = require('fs-readstream-seek');
 
-const VERB = "verb", NOUN = "noun", ADVERB = "adverb", ADJECTIVE = "adjective", ANY = "any";
+const VERB = "verb", NOUN = "noun", ADVERB = "adverb", ADJECTIVE = "adjective";
 
 //functions
 module.exports = {
