@@ -77,4 +77,4 @@ function getWord(type, amount) {
 		}
 	});
 }
-
+}
