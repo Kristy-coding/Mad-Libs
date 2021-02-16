@@ -490,4 +490,10 @@ h1 {
 .input-group>.form-control {
     margin-left: 0;
 }
+.login-card, .sign-up-card {
+    max-width: 90%;
+}
+.sign-up-button {
+    margin-left: 16px;
+}
 }   
