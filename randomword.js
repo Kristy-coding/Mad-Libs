@@ -7,10 +7,10 @@ const VERB = "verb", NOUN = "noun", ADVERB = "adverb", ADJECTIVE = "adjective", 
 
 //functions
 module.exports = {
-	getVerbs: (amount = 1) => getWord(VERB, amount),
-	getNouns: (amount = 1) => getWord(NOUN, amount),
-	getAdverbs: (amount = 1) => getWord(ADVERB, amount),
-	getAdjectives: (amount = 1) => getWord(ADJECTIVE, amount),
+	getVerbs: (amount = 3) => getWord(VERB, amount),
+	getNouns: (amount = 3) => getWord(NOUN, amount),
+	getAdverbs: (amount = 3) => getWord(ADVERB, amount),
+	getAdjectives: (amount = 3) => getWord(ADJECTIVE, amount),
 };
 
 //this produces a data file path
