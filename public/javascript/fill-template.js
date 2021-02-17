@@ -9,6 +9,8 @@ const kidArray = ["ajective","verb ending in -ing","ajective","ajective","verb e
 
 const halloweenArray = ["verb", "adjective", "adjective", "plural noun", "noun", "noun", "verb", "verb", "verb"]
 
+const speechArray = ["adjective","adjective","plural noun","plural noun","adjective", "noun","noun","plural noun","adjective", "person in room (male)", "adjective","noun", "adjective","noun","plural noun","plural noun", "adjective","adjective","adjective"]
+
 let array = ""
 
 // we can enter all the template arrays here and then say 
@@ -60,6 +62,14 @@ function chooseArray () {
       if (title.includes("Halloween")){
         array = halloweenArray
         word_count = word_count + halloweenArray.length
+        console.log(word_count)
+        // initiate word count
+        word_count_text.textContent = word_count
+        
+      }
+      if (title.includes("Political Speech")){
+        array = speechArray
+        word_count = word_count + speechArray.length
         console.log(word_count)
         // initiate word count
         word_count_text.textContent = word_count

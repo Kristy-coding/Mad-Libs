@@ -95,6 +95,10 @@ router.get(`/story/generate/:id`, (req, res) => {
           res.render("halloween-template", {
             story,loggedIn: true });
         }
+        if(story.title ==="Political Speech") {
+          res.render("political-speech-template", {
+            story,loggedIn: true });
+        }
       } 
       
       else {
