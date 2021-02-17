@@ -14,7 +14,6 @@ module.exports = {
 };
 
 
-
 //this produces a data file path
 function getPathOfType(type) {
 	if(type = [NOUN, VERB, ADVERB, ADJECTIVE][randomInt(0, 3)]); {
