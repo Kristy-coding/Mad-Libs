@@ -291,6 +291,34 @@ h1 {
     border-color: rgb(76, 4, 245) ;
 }
 
+.word-bank-title{
+    padding-top: 100px;
+    margin-left: 100px;
+}
+.random-word-p, .random-word{
+    margin-left: 100px;
+    
+}
+.random-word-container {
+    padding-top: 20px;
+    max-width: 600px;
+    margin-left: 100px;
+}
+.random-word{
+    
+    font-weight: bold;
+    font-size:large;
+}
+
+.row {
+    margin-left: 100px;
+    margin-top:100px;
+}
+.row h3 {
+    text-decoration: underline;
+}
+
+
 
 @media screen and (max-width: 770px) {
     img {
@@ -495,5 +523,12 @@ h1 {
 }
 .sign-up-button {
     margin-left: 16px;
+}
+.random-word-container, .random-word-p, .random-word{
+    margin-left: 0;
+}
+
+body {
+    background-image: url(/images/purple-1788479_1280.png);
 }
 }   

@@ -149,32 +149,36 @@ router.get('/saved', (req, res) => {
     });
 })
 
-  //res.render('saved-templates',{loggedIn: true});
+// random word dashboard route 
 
-//   Story.findOne({
-//     where: {
-//       //text: true,
-//       //user_id: req.session.user_id
-//       id: 3
-//     },
-//     include: [
-//       {model: Word,},
-//       {
-//         model: User,
-//         attributes: ['username']
+//GET /dashboard/wordbank
+router.get('/wordbank', (req, res)=>{
+  res.render('word-bank-template', {loggedIn: true})
+})
+
+//   Word.findAll({
+ 
+//   })
+//     .then(dbWordData => {
+        
+//       if (dbWordData) {
+//       // serialize the data then pass it to render as an object 
+
+//         //const story = dbStoryData.get({ plain: true });
+//         const word = dbWordData.map(story => word.get({ plain: true }));
+
+//         //console.log(story)
+
+//         res.render('word-bank-template', {
+//           story,loggedIn: true });
+//       } else {
+//         res.status(404).end();
 //       }
-//     ]
-//   })
-//   .then(dbStoryData => {
-//     // serialize all the storied using map before passing to template
-//     const story = dbStoryData.map(story => story.get({ plain: true }));
-//     res.render('saved-templates', { story, loggedIn: true });
-//   })
-//   .catch(err => {
-//     console.log(err);
-//     res.status(500).json(err);
-//   });
-// });
+//     })
+//     .catch(err => {
+//       res.status(500).json(err);
+//     });
+// })
 
 
 
