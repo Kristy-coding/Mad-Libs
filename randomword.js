@@ -1,81 +1,41 @@
-//need to install 'npm i random-part-of-speech'
-const rpos = require('random-part-of-speech');
-const fs = require('fs');
-const seekableStream = require('fs-readstream-seek');
+var myAdjective;
+var myAdverb;
+var myNoun;
+var myVerb;
+var compiled = Handlebars.compile(myTemplate);
 
-const VERB = "verb", NOUN = "noun", ADVERB = "adverb", ADJECTIVE = "adjective";
+//on-click random adjective returned
+$('#adjective').click(function(){
+  myAdjective = $('#adjective').val();
+  $('#adjective').html(compiled({adjective:myAdjective}));
+//get random adjective from array
+var adjectives = ["gullible", "possible", "milky", "scrawny", "mute", "bored", "weak", "cloudy", "fumbling", "shrill", "zippy", "brash", "spicy", 			"talented", "smart", "swanky", "kaput", "square", "mundane"];
+var randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+});
 
-//functions
-module.exports = {
-	getVerbs: (amount = 3) => getWord(VERB, amount),
-	getNouns: (amount = 3) => getWord(NOUN, amount),
-	getAdverbs: (amount = 3) => getWord(ADVERB, amount),
-	getAdjectives: (amount = 3) => getWord(ADJECTIVE, amount),
-};
+//on-click random adverb returned
+$('#adverb').click(function(){
+	myAdverb = $('#adverb').val();
+	$('#adverb').html(compiled({adverb:myAdverb}));
+//get random adverb from array
+var adverbs = ["weakly", "likely", "seriously", "elegantly", "powerfully", "roughly", "truly", "crazily","dearly", "afterwards", "helplessly", "rigidly", "lovingly", "anyway", "currently", "upright", "longingly", "woefully", "freely","vastly"];
+var randomAdverb = adverbs[Math.floor(Math.random() * adverbs.length)];
+});
 
+//on-click random noun returned
+$('#noun').click(function(){
+	myNoun = $('noun').val();
+	$('#noun').html(compiled({noun:myNoun}));
+//get random noun from array
+var nouns = ["system", "clam", "sleet", "riddle", "quiver", "meal", "thing", "number", "burst", "screw","train", "hook", "stove", "cat", "rice", "dog", "milk", "soup", "juice","yam"];
+var randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+});
 
-//this produces a data file path
-function getPathOfType(type) {
-	if(type = [NOUN, VERB, ADVERB, ADJECTIVE][randomInt(0, 3)]); {
-	return `${__dirname}/word_files/${type}s.words`;
-}
-
-//returns a random word
-function getWord(type, amount) {
-	return new Promise((resolveMain, rejectMain) => {
-		if(amount <= 0) {
-			resolveMain([]);
-			return;
-		}
-
-		try {
-			//open the desired file as a stream to freely seek around it
-			const data_path = getPathOfType(type);
-			const file_size = fs.stat(data_path, (err, stats) => {
-				if(err) {
-					rejectMain(err);
-					return;
-				}
-				var data_stream = new seekableStream(data_path);
-				data_stream.setEncoding('utf8');
-
-				//grab a random word from the stream `amount` times
-				var promise_array = [];
-				for (var i = amount - 1; i >= 0; i--) {
-
-					promise_array.push(
-						() => new Promise((resolve, reject) => {
-							data_stream.seek(randomInt(0, stats.size - 1));
-							data_stream.on('data', chunk => {
-								chunk = chunk.split("\n");
-								if(chunk.length < 2) {
-									data_stream.seek(randomInt(0, stats.size));
-									return;
-								}
-								data_stream.removeAllListeners('data');
-								resolve(chunk[1]);
-								return;
-							});
-						})
-					);
-
-				}
-				promise_array.reduce((chain, nextPromiseFunc) => {
-					return chain.then(word_array => {
-						return nextPromiseFunc().then(last_word => {
-							return [...word_array, last_word];
-						});
-					});
-				}, Promise.resolve([]))
-				.then(word_array => {
-					data_stream.destroy();
-					resolveMain(word_array);
-				});
-			});
-		} catch(err) {
-			rejectMain(err);
-			return;
-		}
-	});
-}
-}
+//on-click random verb returned
+$('#verb').click(function(){
+	myVerb = $('verb').val();
+	$('#verb').html(compiled({verb:myverb}));
+//get random verb from array
+var verbs = ["fancy", "destroy","wink", "prevent", "fix", "crash", "tease", "curve", "screw", "doubt","attempt", "approve", "rob", "amuse", "lighten", "sniff", "rejoice", "laugh", "soothe"];
+var randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+});
