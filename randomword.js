@@ -1,13 +1,3 @@
-//need to install 'npm install handlebars-form-helpers'
-
-var hbs = require('hbs');
-require('handlebars-form-helpers').register(hbs.handlebars);
-
-HandlebarsFormHelpers.register(Handlebars, {
-	namespace: 'randomword',
-	validationErrorClass: 'custom-validation-class'
-  });
-
 var myAdjective;
 var myAdverb;
 var myNoun;
@@ -49,3 +39,4 @@ $('#verb').click(function(){
 var verbs = ["fancy", "destroy","wink", "prevent", "fix", "crash", "tease", "curve", "screw", "doubt","attempt", "approve", "rob", "amuse", "lighten", "sniff", "rejoice", "laugh", "soothe"];
 var randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
 });
+

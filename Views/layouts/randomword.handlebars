@@ -9,72 +9,40 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="public/stylesheets/secondpagestyle.css">
 </head>
 
 <body>
-    <div class="container"></div>
-    <div class="wrapper">
-        <header class="sparkle">
-            <nav class="navbar navbar-expand-lg sparkle">
-                <div class="container-fluid">
-                    <div class="" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">HOMEPAGE</a>
-                            </li>
-                            {{#if loggedIn}}
+    <span class="main-title second-title">Generate a Random Word</span>
+    <div>
+        <h1>Random Adjective</h1>
+        <FORM NAME="WordForm">
+            <INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+            <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="adjective">
+        </FORM>
 
-                            <li class="nav-item">
-                                <a class="nav-link get-all-story nav-link-play" id="completed" href="/dashboard">
-                                    PLAY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="completed" href="/">WORD BANK</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="completed" href="/dashboard/saved">VIEW SAVED</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="logout" href="/">LOGOUT</a>
-                            </li>
-                            {{else}}
-                            <li class="nav-item">
-                                <a class="nav-link" href="/login">LOGIN</a>
-                            </li>
-                            {{/if}}
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <h1>
-                {{#if loggedIn}}
-                <main>
-                    {{{ body }}}
-                    <h1>
-                        {{#if loggedIn}}
-                        <a class="main-title" href="/dashboard">MAD LIBS</a>
-                        {{else}}
-                        <a class="main-title" href="/">MAD LIBS</a>
-                        {{/if}}
-                        <span class="main-title second-title">Need Help...GENERATE A RANDOM WORD</span>
-                    </h1>
-                    <div>
-                        {{#form url class="form"}}{{/form}}
-                        {{submit "save" "Random Adjective" id="submit_{{adjective}}"}}
-                        {{submit "save" "Random Adverb" id="submit_{{adverb}}"}}
-                        {{submit "save" "Random Noun" id="submit_{{noun}}"}}
-                        {{submit "save" "Random Verb" id="submit_{{verb}}"}}
-                    </div>
-            </h1>
-            </main>
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
+        <h1>Random Adverb</h1>
+        <FORM NAME="WordForm">
+            <INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+            <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="adverb">
+        </FORM>
+
+        <h1>Random Noun</h1>
+        <FORM NAME="WordForm">
+            <INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+            <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="noun">
+        </FORM>
+
+        <h1>Random Verb</h1>
+        <FORM NAME="WordForm">
+            <INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+            <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="verb">
+        </FORM>
+    </div>
+    </main>
     <script src="randomword.js"></script>
     <script src="handlebars.js"></script>
     <script src="handlebars.form-helpers.js"></script>
-    {{/if}}
-
 </body>
 
 </html>
