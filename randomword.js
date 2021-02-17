@@ -13,6 +13,8 @@ module.exports = {
 	getAdjectives: (amount = 3) => getWord(ADJECTIVE, amount),
 };
 
+
+
 //this produces a data file path
 function getPathOfType(type) {
 	if(type = [NOUN, VERB, ADVERB, ADJECTIVE][randomInt(0, 3)]); {
