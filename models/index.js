@@ -28,7 +28,7 @@ Word.belongsTo(User, {
 });
   
 Word.belongsTo(Story, {
-    foreignKey: 'story_id'
+    foreignKey: 'story_id', onDelete: 'CASCADE'
 });
   
 User.hasMany(Word, {
@@ -38,7 +38,7 @@ User.hasMany(Word, {
   
 Story.hasMany(Word, {
     // here we are saying that the comments should also have a foreign key 'post_id' that references the post 'id' so we know which post the comment is attached to
-    foreignKey: 'story_id',
+    foreignKey: 'story_id', onDelete: 'CASCADE'
     
 });
 

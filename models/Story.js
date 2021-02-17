@@ -6,6 +6,8 @@ const {Model, DataTypes} = require('sequelize');
 // we need to connect to the database through our config/connection file 
 const sequelize = require('../config/connection');
 
+// trying to search for a valu that "is not null"
+
 
 // create our Post Model 
 
@@ -26,6 +28,10 @@ Story.init(
         title: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        text: {
+            type: DataTypes.TEXT,
+            allowNull: true
         },
         //this column determines who created the story... Using the references property, we establish the relationship between this story and the user by creating a reference to the User model, specifically to the id column that is defined by the key property, which is the primary key. The user_id is conversely defined as the foreign key (in the index folder where we made our associations and relationships) and will be the matching link between the user and the story
         user_id: {
