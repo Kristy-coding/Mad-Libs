@@ -5,13 +5,13 @@ A Mad Libs word game played online where the user can select from different temp
 
 ***
 ### Table of Contents  
-1. [Technologies]()
-2. [User Story]()
-3. [Screenshot]()
-4. [Video Demo Walkthrough]()
-5. [License]()
-6. [Contributors]()
-7. [Questions]()  
+1. [Technologies](https://github.com/Kristy-coding/Mad-Libs/tree/feature/randomword#technologies)
+2. [User Story](https://github.com/Kristy-coding/Mad-Libs/tree/feature/randomword#user-story)
+3. [Screenshot](https://github.com/Kristy-coding/Mad-Libs/tree/feature/randomword#screenshot)
+4. [Video Demo Walkthrough](https://github.com/Kristy-coding/Mad-Libs/tree/feature/randomword#video-demo-walkthrough)
+5. [License](https://github.com/Kristy-coding/Mad-Libs/tree/feature/randomword#licenses)
+6. [Contributors](https://github.com/Kristy-coding/Mad-Libs/tree/feature/randomword#contributors)
+7. [Questions](https://github.com/Kristy-coding/Mad-Libs/tree/feature/randomword#questions)  
 
 ***
 ### Technologies   
@@ -31,7 +31,13 @@ As a user I want to be able to play Mad Libs words games! When I login then I am
 
 ***
 ### Screenshot  
-![Screenshot Mad Libs Homepage]()  
+![Screenshot Mad Libs Log-in Screen](public/images/loginscreen.png)  
+
+![Screenshot Mad Libs Homepage](public/images/homepage.png)  
+
+![Screenshot Mad Libs Templates Page](public/images/templatespage.png)  
+
+![Screenshot Mad Libs Template Selected Page](public/images/templateselected.png)  
 
 ***
 ### Video Demo Walkthrough
@@ -40,14 +46,6 @@ As a user I want to be able to play Mad Libs words games! When I login then I am
 ***
 ### Licenses   
 This application is covered under the MIT license
-
-***
-### Features  
-JavaScript  
-NPM  
-MySQL2 - to connect MySQL database and perform queries      
-Inquirer - to interact with the user via the command-line   
-Console Table - to print MySQL rows to the console
 
 ***
 ### Contributors  
