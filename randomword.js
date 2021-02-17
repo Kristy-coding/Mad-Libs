@@ -1,3 +1,13 @@
+//need to install 'npm install handlebars-form-helpers'
+
+var hbs = require('hbs');
+require('handlebars-form-helpers').register(hbs.handlebars);
+
+HandlebarsFormHelpers.register(Handlebars, {
+	namespace: 'randomword',
+	validationErrorClass: 'custom-validation-class'
+  });
+
 var myAdjective;
 var myAdverb;
 var myNoun;

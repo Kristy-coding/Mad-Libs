@@ -49,33 +49,30 @@
             </nav>
             <h1>
                 {{#if loggedIn}}
-                <div id="checkbox-template" style="display:none">
-                    <div style="display:inline-block">
-                        <input type="checkbox" id="checkbox_{{adjectives}}" />
-                        <label for="checkbox_{{adjectives}}">
-
-                        <input type="checkbox" id="checkbox_{{adverbs}}" />
-                        <label for="checkbox_{{adverbs}}">
-
-                        <input type="checkbox" id="checkbox_{{nouns}}" />
-                        <label for="checkbox_{{nouns}}">
-
-                        <input type="checkbox" id="checkbox_{{verbs}}" />
-                        <label for="checkbox_{{verbs}}">
-                        {{label}}
-                        </label>
+                <main>
+                    {{{ body }}}
+                    <h1>
+                        {{#if loggedIn}}
+                        <a class="main-title" href="/dashboard">MAD LIBS</a>
+                        {{else}}
+                        <a class="main-title" href="/">MAD LIBS</a>
+                        {{/if}}
+                        <span class="main-title second-title">Need Help...GENERATE A RANDOM WORD</span>
+                    </h1>
+                    <div>
+                        {{#form url class="form"}}{{/form}}
+                        {{submit "save" "Random Adjective" id="submit_{{adjective}}"}}
+                        {{submit "save" "Random Adverb" id="submit_{{adverb}}"}}
+                        {{submit "save" "Random Noun" id="submit_{{noun}}"}}
+                        {{submit "save" "Random Verb" id="submit_{{verb}}"}}
                     </div>
-                </div>
             </h1>
-
-        </header>
-        <main>
-            {{{ body }}}
-        </main>
-    </div>
-    </div>
+            </main>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    <script src="randomword.js"></script>
+    <script src="handlebars.js"></script>
+    <script src="handlebars.form-helpers.js"></script>
     {{/if}}
 
 </body>
