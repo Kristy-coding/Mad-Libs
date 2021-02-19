@@ -32,13 +32,10 @@ As a user I want to be able to play Mad Libs words games! When I login then I am
 
 ***
 ### Screenshots  
-![Screenshot Mad Libs Log-in Screen](public/images/loginscreen.png)  
+<img width="1310" alt="Screen Shot 2021-02-19 at 7 43 32 AM" src="https://user-images.githubusercontent.com/68924529/108506075-4395b180-7286-11eb-8e26-bffbeb697cf0.png">  
 
-![Screenshot Mad Libs Homepage](public/images/homepage.png)  
 
-![Screenshot Mad Libs Templates Page](public/images/templatespage.png)  
-
-![Screenshot Mad Libs Template Selected Page](public/images/templateselected.png)  
+<img width="1326" alt="Screen Shot 2021-02-19 at 7 42 27 AM" src="https://user-images.githubusercontent.com/68924529/108506149-5a3c0880-7286-11eb-88d1-1bd31dca47f0.png">
 
 ***
 ### Video Demo Walkthrough
