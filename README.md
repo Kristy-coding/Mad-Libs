@@ -16,7 +16,7 @@ A Mad Libs word game played online where the user can select from different temp
 
 ***
 ### Technologies   
-MySQL, Node, Sequelize, Express, bcrypt, donenv, clickspark.js, sparkle.js, Handlebars   
+MySQL, Node, Sequelize, Express, bcrypt, donenv, clickspark.js, sparkle.js, Handlebars, Javascript, CSS  
 
 ***
 ### User Story   
